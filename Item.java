@@ -4,13 +4,21 @@ public class Item {
 	private int itemCode;
 	private  String itemName;
 	private double price;
-	private String location;
+	private String location_id;
 	private String unit;
 	private Date dateOfManufacture;
 	private Date dateOfExpiry;
 	private int beginningInventory;
 	private int  quantity;
 	private String category;
+	private int warehouse_id;
+	
+	public int getWarehouse_id() {
+		return warehouse_id;
+	}
+	public void setWarehouse_id(int warehouse_id) {
+		this.warehouse_id = warehouse_id;
+	}
 	public int getItemCode() {
 		return itemCode;
 	}
@@ -29,11 +37,11 @@ public class Item {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public String getLocation() {
-		return location;
+	public String getLocation_id() {
+		return location_id;
 	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setLocation_id(String location) {
+		this.location_id = location;
 	}
 	public String getUnit() {
 		return unit;
