@@ -1,29 +1,36 @@
+package com.manhpack9;
+
 import java.util.Date;
 
 public class Item {
 	private int itemCode;
 	private  String itemName;
 	private double price;
-	private String location_id;
+	private String location;
 	private String unit;
 	private Date dateOfManufacture;
 	private Date dateOfExpiry;
 	private int beginningInventory;
 	private int  quantity;
 	private String category;
-	private int warehouse_id;
-	
-	public int getWarehouse_id() {
-		return warehouse_id;
-	}
-	public void setWarehouse_id(int warehouse_id) {
-		this.warehouse_id = warehouse_id;
-	}
+	private Warehouse warehouse_location;
 	public int getItemCode() {
 		return itemCode;
 	}
-	public void setItemCode(int itemCode) {
+	public Item(int itemCode, String itemName, double price, String location, String unit, Date dateOfManufacture,
+			Date dateOfExpiry, int beginningInventory, int quantity, String category, Warehouse warehouse_location) {
+		super();
 		this.itemCode = itemCode;
+		this.itemName = itemName;
+		this.price = price;
+		this.location = location;
+		this.unit = unit;
+		this.dateOfManufacture = dateOfManufacture;
+		this.dateOfExpiry = dateOfExpiry;
+		this.beginningInventory = beginningInventory;
+		this.quantity = quantity;
+		this.category = category;
+		this.warehouse_location = warehouse_location;
 	}
 	public String getItemName() {
 		return itemName;
@@ -37,11 +44,11 @@ public class Item {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public String getLocation_id() {
-		return location_id;
+	public String getLocation() {
+		return location;
 	}
-	public void setLocation_id(String location) {
-		this.location_id = location;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	public String getUnit() {
 		return unit;
@@ -79,5 +86,26 @@ public class Item {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	public Warehouse getWarehouse_location() {
+		return warehouse_location;
+	}
+	public void setWarehouse_location(Warehouse warehouse_location) {
+		this.warehouse_location = warehouse_location;
+	}
+	public void setItemCode(int itemCode) {
+		this.itemCode = itemCode;
+	}
+	@Override
+	public String toString() {
+		return "Item [itemCode=" + itemCode + ", itemName=" + itemName + ", price=" + price + ", location=" + location
+				+ ", unit=" + unit + ", dateOfManufacture=" + dateOfManufacture + ", dateOfExpiry=" + dateOfExpiry
+				+ ", beginningInventory=" + beginningInventory + ", quantity=" + quantity + ", category=" + category
+				+ ", warehouse_location=" + warehouse_location + "]";
+	}
+	
 	
 }
+
+	
+
+
